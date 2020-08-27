@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iossdkexample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Af-9O-lpb" customClass="PLRecordingView" customModule="PrismaID">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9i-H6-BiP" userLabel="View - detection area">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="XxV-8H-Z1Z">
+                                        <rect key="frame" x="14.5" y="49" width="346.5" height="549"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="thumb" translatesAutoresizingMaskIntoConstraints="NO" id="Uwb-u4-iW6">
+                                        <rect key="frame" x="-202.5" y="525" width="295.5" height="329.5"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="hand" translatesAutoresizingMaskIntoConstraints="NO" id="2pK-Z9-zIL">
+                                        <rect key="frame" x="159.5" y="429" width="543.5" height="381"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Uwb-u4-iW6" firstAttribute="leading" secondItem="XxV-8H-Z1Z" secondAttribute="leading" constant="-216.5" id="Omy-9h-U5E"/>
+                                    <constraint firstItem="2pK-Z9-zIL" firstAttribute="top" secondItem="XxV-8H-Z1Z" secondAttribute="top" constant="380" id="TVf-Jg-qcS"/>
+                                    <constraint firstItem="2pK-Z9-zIL" firstAttribute="trailing" secondItem="XxV-8H-Z1Z" secondAttribute="trailing" constant="342" id="VmN-Tf-fCL"/>
+                                    <constraint firstItem="XxV-8H-Z1Z" firstAttribute="centerX" secondItem="e9i-H6-BiP" secondAttribute="centerX" id="Yoh-Io-FXe"/>
+                                    <constraint firstItem="XxV-8H-Z1Z" firstAttribute="centerY" secondItem="e9i-H6-BiP" secondAttribute="centerY" id="aaE-Ge-yeR"/>
+                                    <constraint firstItem="Uwb-u4-iW6" firstAttribute="top" secondItem="XxV-8H-Z1Z" secondAttribute="top" constant="476" id="dZL-PE-3nX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="e9i-H6-BiP" firstAttribute="bottom" secondItem="hWg-ol-kXO" secondAttribute="bottom" id="8aj-c6-F9j"/>
+                            <constraint firstItem="e9i-H6-BiP" firstAttribute="trailing" secondItem="hWg-ol-kXO" secondAttribute="trailing" id="DbS-Jo-TJT"/>
+                            <constraint firstItem="e9i-H6-BiP" firstAttribute="top" secondItem="hWg-ol-kXO" secondAttribute="top" id="DhR-tS-yd4"/>
+                            <constraint firstItem="e9i-H6-BiP" firstAttribute="leading" secondItem="hWg-ol-kXO" secondAttribute="leading" id="fnq-WU-kbz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hWg-ol-kXO"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="XxV-8H-Z1Z" id="A9j-7K-xtE"/>
+                        <outlet property="handImageView" destination="2pK-Z9-zIL" id="lYv-yU-g6j"/>
+                        <outlet property="handTopConstraint" destination="TVf-Jg-qcS" id="qTo-la-tSV"/>
+                        <outlet property="handTrailingConstraint" destination="VmN-Tf-fCL" id="4EX-3Y-HrS"/>
+                        <outlet property="thumbImageView" destination="Uwb-u4-iW6" id="6AK-Se-ogA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-590" y="-129"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="card" width="346.5" height="549"/>
+        <image name="hand" width="543.5" height="381"/>
+        <image name="thumb" width="295" height="329.5"/>
+    </resources>
+</document>

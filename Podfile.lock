@@ -1,0 +1,16 @@
+PODS:
+  - PrismaID (1.0.0)
+
+DEPENDENCIES:
+  - PrismaID
+
+SPEC REPOS:
+  https://github.com/PrismadeLabs/Specs.git:
+    - PrismaID
+
+SPEC CHECKSUMS:
+  PrismaID: 67dc49f8f393daab6299fc3a802dfd8606d45fc3
+
+PODFILE CHECKSUM: b823c268a77c3294e8e0119042aebbb04cea8f6e
+
+COCOAPODS: 1.6.1
